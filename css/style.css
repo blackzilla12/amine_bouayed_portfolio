@@ -85,8 +85,9 @@ span {
     line-height: 1.3;
 }
 .home-image img {
-    width: 35vw;
+    width: 32vw;
     border-radius: 50%;
+    height: 32vw;
 }
 .home-content p {
     font-size: 1.6rem;
@@ -140,7 +141,8 @@ span {
 }
 .about-img img {
     border-radius: 50%;
-    width: 35vw;
+    width: 32vw;
+    height: 32vw;
 }
 .heading {
     text-align: center;
@@ -157,17 +159,49 @@ span {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
-.services h2 {
+.career h2 , .Internship h2 {
     margin-bottom: 5rem;
 }
-.services-container {
+.career-container , .Internship-container{
    display: grid;
    grid-template-columns: repeat(3,1fr);
    justify-content: center;
    align-items: center;
    gap: 5rem;
 }
-.services-container .services-box{
+.career-education > h3 , .Internship-wrap > h3{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.career-education ul , .Internship-education ul{
+    padding-top: 2.7rem;
+    padding-bottom: 2rem;
+}
+.career-education ul li , .Internship-section ul li {
+    margin-left: 30px;
+    font-size: 2rem;
+    padding-bottom: 20px;
+}
+.career-education ul li:first-child , .Internship-section ul li:first-child {
+    font-size: 2.6rem;
+    margin-left: 0;
+}
+.career-education , .Internship-section{
+    padding: 3rem 2rem 4rem;
+}
+.career-education-section , .Internship-section{
+    display: flex;
+    justify-content: space-between;
+}
+.career-education-section .career-img img  {
+    border-radius: 25px;
+}
+.Internship-section .Internship-img img{
+    border-radius: 50%;
+    width: 100%;
+}
+.career-container .career-box {
     flex: 1 1 30rem;
     background: var(--second-bg-color);
     padding: 3rem 2rem 4rem;
@@ -176,47 +210,68 @@ span {
     border: .2rem solid var(--bg-color);
     transition: .5s ease;
 }
-.services-container .services-box:hover {
+.career-container .career-box:hover {
     border-color: var(--main-color);
     transform: scale(1.06);
 }
-.services-box i {
+.career-box i {
     font-size: 7rem;
     color: var(--main-color);
 }
-.services-box h3 {
+.career-box h3 {
     font-size: 2.6rem;
 }
-.services-box p {
+.career-box p {
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
 }
 .portfolio {
     background: var(--second-bg-color);
 }
-.portfolio h2 {
+.skills,.passions {
+    background: var(--bg-color);
+}
+.skills h3 {
+    text-align: center;
+    font-size: 2.6rem;
+    padding-top: 5rem;
+}
+.portfolio h2 ,.passions h2 {
     margin-bottom: 4rem;
 }
-.portfolio-container {
+.portfolio-container,.passions-container {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     align-items: center;
     gap: 2.5rem;
 }
-.portfolio-container .portfolio-box{
+.skills-container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    align-items: center;
+    gap: 2rem;
+}
+.portfolio-container .portfolio-box , .passions-container .passions-box {
     position: relative;
     border-radius: 2rem;
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
 }
-.portfolio-container .portfolio-box img {
+
+.skills-container .skills-box img {
+    width: 150px;
+    height: 150px;
+    border-radius: 2rem;
+}
+.portfolio-container .portfolio-box img ,.passions-container .passions-box img {
     width: 100%;
     height: 30rem;
     /* margin: 0 25%; */
     /* padding-top: 2rem; */
     transition: 0.5s ease;
 }
-.portfolio-box .portfolio-layer {
+.portfolio-box .portfolio-layer , .passions-box .passions-layer {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -232,10 +287,10 @@ span {
     transform: translateY(100%);
     transition: 0.5s ease;
 }
-.portfolio-box:hover img {
+.portfolio-box:hover img , .passions-box:hover img {
     transform: scale(1.1);
 }
-.portfolio-layer h4 {
+.portfolio-layer h4 , .passions-layer h4 {
     font-size: 2.2rem;
 }
 .portfolio-layer p {
@@ -255,7 +310,7 @@ span {
     font-size: 2rem;
     color: var(--second-bg-color);
 }
-.portfolio-box:hover .portfolio-layer {
+.portfolio-box:hover .portfolio-layer, .passions-box:hover .passions-layer {
     transform: translateY(0);
 }
 .contact h2 {
@@ -292,6 +347,59 @@ span {
     margin-top: 2rem;
     cursor: pointer;
 }
+
+.testimonials {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+.testimonials h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #222;
+}
+.iit-logo {
+    max-width: 200px;
+    margin: 0 auto 20px;
+    border-radius: 2rem;
+}
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.testimonial-box {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+}
+.testimonial-box:hover {
+    transform: translateY(-5px);
+}
+.testimonial-box img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+.testimonial-box h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+.testimonial-box p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #555;
+}
+
 .footer{
     display: flex;
     justify-content: space-between;
@@ -318,7 +426,21 @@ span {
     font-size: 2.4rem;
     color: var(--second-bg-color);
 }
+/* Responsive Design */
 
+@media (max-width: 480px) {
+    .testimonials h2 {
+        font-size: 1.8em;
+    }
+    .testimonial-box {
+        padding: 15px;
+    }
+}
+@media (max-width : 1485px) {
+    .skills-container {
+        grid-template-columns: repeat(4,1fr);
+    }
+}
 @media (max-width:1200px){
     html { font-size: 55%;}
 }
@@ -329,7 +451,7 @@ span {
     section {
         padding: 10rem 3% 2rem;
     }
-    .services{
+    .career{
         padding-bottom: 7rem;
     }
     .portfolio {
@@ -340,6 +462,21 @@ span {
     }
     footer {
         padding: 2rem 3%;
+    }
+}
+@media (max-width:860px) {
+    .career-container ,.career-education-section , .Internship-wrap , .Internship-section{
+        display: flex;
+        flex-direction: column;
+    }
+    .career-education-section .career-img img {
+        width:100%;
+    }
+    .Internship-section .Internship-img img {
+        width: 60%;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
     }
 }
 @media (max-width:768px){
@@ -378,23 +515,30 @@ span {
         font-size: 5rem;
     }
     .home-image img , .about-img img{
-        width: 70vw;
+        width: 40vw;
         margin-top: 4rem;
     }
     .about {
         flex-direction: column-reverse;
     }
-    .services h2 {
+    .career h2 {
         margin-bottom: 3rem;
-    }
-    .services-container {
-        display: flex;
-        flex-direction: column;
     }
     .portfolio h2 {
         margin-bottom: 3rem;
     }
     .portfolio-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .testimonials h2 {
+        font-size: 2em;
+    }
+    .testimonial-box {
+        max-width: 90%;
+    }
+}
+@media (max-width:690px){
+    .skills-container {
         grid-template-columns: repeat(2,1fr);
     }
 }

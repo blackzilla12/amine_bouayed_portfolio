@@ -5,7 +5,7 @@ const quizData = [
         b: "JavaScript",
         c: "C++",
         d: "PHP",
-        correct: "b", // Replace with the actual correct answer.
+        correct: "b", 
     },
     {
         question: "What framework do I frequently use for building web applications?",
@@ -13,15 +13,15 @@ const quizData = [
         b: "React",
         c: "Laravel",
         d: "Angular",
-        correct: "c", // Replace with your primary framework.
+        correct: "c",
     },
     {
-        question: "Which type of applications have I primarily worked on?",
+        question: "Which type of applications have I mostly worked on?",
         a: "Mobile apps",
         b: "Web apps",
         c: "Desktop apps",
         d: "Game development",
-        correct: "b", // Replace with your focus area.
+        correct: "b",
     },
     {
         question: "What is the main focus of my recent projects?",
@@ -29,7 +29,7 @@ const quizData = [
         b: "Blockchain development",
         c: "E-commerce platforms",
         d: "Educational tools",
-        correct: "a", // Replace with your actual focus area.
+        correct: "a", 
     },
     {
         question: "Which tool do I often use for version control?",
@@ -38,6 +38,62 @@ const quizData = [
         c: "Mercurial",
         d: "None",
         correct: "a",
+    },
+    {
+        question: "Which degree have I recently obtained?",
+        a: "Bachelor's in Computer Science",
+        b: "Master's in AI",
+        c: "Engineering's Degree in Software Engineering and Information Systems",
+        d: "Diploma in Web Development",
+        correct: "c",
+    },
+    {
+    question: "What database system do I primarily work with?",
+        a: "MySQL",
+        b: "PostgreSQL",
+        c: "MongoDB",
+        d: "Oracle",
+        correct: "a",
+    },
+    {
+        question: "Which soft skill do I consider most important?",
+        a: "Teamwork",
+        b: "Problem-solving",
+        c: "Time management",
+        d: "Communication",
+        correct: "b",
+    },
+    {
+        question: "What was the objective of my summer internship in 2023?",
+        a: "Learning Python",
+        b: "Exploring Laravel and building an e-commerce website",
+        c: "Contributing to an open-source project",
+        d: "Designing mobile apps",
+        correct: "b",
+    },
+    {
+        question: "What is the primary focus of my PFE internship?",
+        a: "AI and machine learning",
+        b: "Blockchain development",
+        c: "Developing a lawyer's work management web app using Laravel",
+        d: "Creating educational tools",
+        correct: "c",
+    },
+    {
+        question: "What is one of my hobbies listed on my website?",
+        a: "Photography",
+        b: "Playing chess",
+        c: "Martial arts",
+        d: "Cycling",
+        correct: "c",
+    },
+    {
+        question: "Which agile method do I often use?",
+        a: "Kanban",
+        b: "Scrum",
+        c: "Extreme Programming",
+        d: "Crystal",
+        correct: "b",
     },
 ];
 const quiz = document.getElementById('quiz');
